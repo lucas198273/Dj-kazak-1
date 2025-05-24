@@ -2,6 +2,11 @@
 export default function AboutVideos() {
   const youtubeLinks = [
     "https://youtube.com/shorts/axKNH2TBwRg?si=Cr0sHjdv393u5V4H",
+    "https://youtu.be/6iTwC2B2sfk?si=0u0M1ts3gRgp-xlE",
+    "https://www.youtube.com/shorts/bTuaUu8bL4E",
+    "https://www.youtube.com/watch?v=lsiBL3CZjVU", 
+    "https://www.youtube.com/watch?v=6iTwC2B2sfk", 
+    "https://www.youtube.com/watch?v=9RCRgLeXhgw",
     // Adicione mais links aqui
   ];
 
