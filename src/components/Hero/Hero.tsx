@@ -24,7 +24,7 @@ function Hero() {
         {/* Imagem */}
         <div className="w-full md:w-1/2">
           <img
-            src="/img1.jpeg"
+            src="/assets/img1.jpeg"
             alt="DJ tocando"
              loading="lazy"
             className="w-full max-w-sm mx-auto md:mx-0 rounded-lg"

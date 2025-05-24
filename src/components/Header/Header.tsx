@@ -27,7 +27,7 @@ export default function Header() {
         <div className="absolute left-1/2 transform -translate-x-1/2 mt-6">
           <Link to="/">
             <img
-              src="/logo3.png"
+              src="/assets/logo3.png"
               alt="Logo"
               className="h-30 w-auto object-contain"
             />

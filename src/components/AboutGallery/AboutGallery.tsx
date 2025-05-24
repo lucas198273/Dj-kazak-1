@@ -2,10 +2,10 @@
 
 export default function AboutGallery() {
   const images = [
-    '/img3.jpeg',
-    '/img2.jpeg',
-    '/img1.jpeg',
-    '/img4.jpeg',
+    '/assets/img3.jpeg',
+    '/assets/img2.jpeg',
+    '/assets/img1.jpeg',
+    '/assets/img4.jpeg',
     // Adicione mais caminhos de imagens conforme necessário
   ];
 
