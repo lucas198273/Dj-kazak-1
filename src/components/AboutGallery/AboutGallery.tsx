@@ -21,6 +21,7 @@ export default function AboutGallery() {
               key={index}
               src={src}
               alt={`DJ KAZAK ${index + 1}`}
+              loading="lazy"
               className="w-full h-64 object-cover rounded-lg shadow-md"
             />
           ))}

@@ -9,6 +9,7 @@ const SocialMediaSection: React.FC = () => {
         <img
           src="/assets/img3.jpeg"
           alt="DJ KAZAK"
+          loading="lazy"
           className="mx-auto mb-6 w-32 h-32 rounded-full object-cover shadow-lg"
         />
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-500">

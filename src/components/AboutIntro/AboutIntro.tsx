@@ -9,6 +9,7 @@ export default function AboutIntro() {
           <img
             src="/assets/img4.jpeg" // Substitua pelo caminho correto da imagem
             alt="DJ KAZAK"
+            loading="lazy"
             className="rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
