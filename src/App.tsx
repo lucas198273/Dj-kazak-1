@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-// import VideosSection from './components/VideosSection/VideosSection';
 import About from './pages/About';
 import MusicSection from './components/MusicSection/MusicSection';
 import SocialMediaSection from './components/SocialMediaSection/SocialMediaSection';
