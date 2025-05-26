@@ -35,7 +35,7 @@ const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl })
 
           {/* Camada por cima para desativar cliques no botão "Reproduzir no SoundCloud" */}
           <div
-            className="absolute bottom-[45px] left-0 w-full h-[35px] bg-black opacity-50 z-10 pointer-events-auto"
+            className="absolute bottom-[45px] left-0 w-full h-[35px] bg-[rgba(0,0,0,0.1)] opacity-50 z-10 pointer-events-auto"
             style={{ borderRadius: '4px' }}
           ></div>
         </div>
