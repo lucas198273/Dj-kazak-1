@@ -10,50 +10,54 @@ export default function MusicSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Faixa 1 */}
           <div className="w-full">
-            <iframe
-              width="100%"
-              height="300"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/discoversoundsmusic/best-acapellas-2017-free-download&visual=true"
-            ></iframe>
+        <iframe
+  width="100%"
+  height="300"
+  scrolling="no"
+  frameBorder="no"
+  allow="autoplay"
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1823157531&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+></iframe>
+
           </div>
 
           {/* Faixa 2 */}
           <div className="w-full">
-            <iframe
-              width="100%"
-              height="300"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/discoversoundsmusic/chords-of-kshmr-vol-1-free-download&visual=true"
-            ></iframe>
+         <iframe
+  width="100%"
+  height="300"
+  scrolling="no"
+  frameBorder="no"
+  allow="autoplay"
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1825949580&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+></iframe>
+
           </div>
 
           {/* Faixa 3 */}
           <div className="w-full">
-            <iframe
-              width="100%"
-              height="300"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/flstudio-projects/fl-studio-project-progressive-house-dubvision-style-flp-samples&visual=true"
-            ></iframe>
+          <iframe
+  width="100%"
+  height="300"
+  scrolling="no"
+  frameBorder="no"
+  allow="autoplay"
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1897798665&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+></iframe>
+
           </div>
 
           {/* Faixa 4 */}
           <div className="w-full">
-            <iframe
-              width="100%"
-              height="300"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/flstudio-projects/progressive-house-flp-1-fl-studio-project-free-downoad&visual=true"
-            ></iframe>
+          <iframe
+  width="100%"
+  height="300"
+  scrolling="no"
+  frameBorder="no"
+  allow="autoplay"
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1904481743&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+></iframe>
+
           </div>
         </div>
 
