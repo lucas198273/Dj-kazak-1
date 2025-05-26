@@ -13,6 +13,9 @@ export default function MusicSection() {
           <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1897798665" />
           <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1825949580" />
           <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1823157531" />
+      <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1950042995" />
+
+
         </div>
 
         {/* Botão para o perfil do SoundCloud */}
