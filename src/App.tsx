@@ -6,10 +6,12 @@ import MusicSection from './components/MusicSection/MusicSection';
 import SocialMediaSection from './components/SocialMediaSection/SocialMediaSection';
 import Footer from './components/Footer/Footer';
 import AboutVideos from './components/AboutVideos/AboutVideos';
+import ScrollTop from './components/ScrollTop/ScrollTop';
 export default function App() {
   
   return (
     <Router>
+      <ScrollTop />
       <Header />
       <Routes>
         <Route
