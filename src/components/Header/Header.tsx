@@ -6,7 +6,7 @@ export default function Header() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="fixed inset-x-0 top-0 h-20 bg-gradient-to-r from-black via-white to-blue-800 text-black z-50 shadow-lg">
+    <header className="fixed inset-x-0 top-0 h-20 bg-gradient-to-r bg-white  text-black z-50 shadow-lg">
       <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between relative">
         {/* Botão Mobile */}
         <button
