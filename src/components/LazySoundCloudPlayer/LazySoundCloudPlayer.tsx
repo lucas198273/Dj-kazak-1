@@ -7,6 +7,11 @@ interface LazySoundCloudPlayerProps {
 const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl }) => {
   const [showPlayer, setShowPlayer] = useState(false);
 
+  // Montamos aqui a URL de incorporação do SoundCloud, sem quebras de linha
+  const iframeSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(
+    trackUrl
+  )}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true&visual=false`;
+
   return (
     <div style={{ minHeight: '300px' }}>
       {!showPlayer ? (
@@ -31,18 +36,7 @@ const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl })
           scrolling="no"
           frameBorder="no"
           allow="autoplay"
-          src={`https://w.soundcloud.com/player/?
-            url=${encodeURIComponent(trackUrl)}
-            &color=%23ff5500
-            &auto_play=false
-            &hide_related=false
-            &show_comments=true
-            &show_user=false
-            &show_reposts=false
-            &show_teaser=true
-            &visual=true`
-              .replace(/\s+/g, '')
-          }
+          src={iframeSrc}
         ></iframe>
       )}
     </div>
