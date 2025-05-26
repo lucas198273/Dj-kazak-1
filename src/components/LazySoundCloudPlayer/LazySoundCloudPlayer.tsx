@@ -7,13 +7,12 @@ interface LazySoundCloudPlayerProps {
 const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl }) => {
   const [showPlayer, setShowPlayer] = useState(false);
 
-  // Montamos aqui a URL de incorporação do SoundCloud, sem quebras de linha
   const iframeSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(
     trackUrl
   )}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true&visual=false`;
 
   return (
-    <div style={{ minHeight: '300px' }}>
+    <div style={{ minHeight: '166px', position: 'relative' }}>
       {!showPlayer ? (
         <button
           onClick={() => setShowPlayer(true)}
@@ -29,15 +28,28 @@ const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl })
           Carregar Player
         </button>
       ) : (
-        <iframe
-          loading="lazy"
-          width="100%"
-          height="300"
-          scrolling="no"
-          frameBorder="no"
-          allow="autoplay"
-          src={iframeSrc}
-        ></iframe>
+        <div style={{ position: 'relative', width: '100%', height: '166px' }}>
+          <iframe
+            loading="lazy"
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            src={iframeSrc}
+          ></iframe>
+          {/* Sobreposição para ocultar o botão "Ouvir no SoundCloud" */}
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '100%',
+              height: '30px',
+              background: 'white',
+            }}
+          ></div>
+        </div>
       )}
     </div>
   );
