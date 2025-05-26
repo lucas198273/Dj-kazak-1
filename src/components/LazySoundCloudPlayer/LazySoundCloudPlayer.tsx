@@ -9,27 +9,21 @@ const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl })
 
   const iframeSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(
     trackUrl
-  )}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=true&visual=false`;
+  )}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=false&visual=false`;
 
   return (
-    <div style={{ minHeight: '166px', position: 'relative' }}>
+    <div className="relative" style={{ minHeight: '166px' }}>
       {!showPlayer ? (
         <button
           onClick={() => setShowPlayer(true)}
-          style={{
-            padding: '10px',
-            background: '#ff5500',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-          }}
+          className="bg-orange-500 text-white py-2 px-4 rounded"
         >
           Carregar Player
         </button>
       ) : (
-        <div style={{ position: 'relative', width: '100%', height: '166px' }}>
+        <div className="relative w-full h-[166px]">
           <iframe
+            title="SoundCloud Player"
             loading="lazy"
             width="100%"
             height="166"
@@ -38,16 +32,11 @@ const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl })
             allow="autoplay"
             src={iframeSrc}
           ></iframe>
-          {/* Sobreposição para ocultar o botão "Ouvir no SoundCloud" */}
+
+          {/* Camada por cima para desativar cliques no botão "Reproduzir no SoundCloud" */}
           <div
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              width: '100%',
-              height: '30px',
-              background: 'white',
-            }}
+            className="absolute bottom-[45px] left-0 w-full h-[35px] bg-black opacity-50 z-10 pointer-events-auto"
+            style={{ borderRadius: '4px' }}
           ></div>
         </div>
       )}
