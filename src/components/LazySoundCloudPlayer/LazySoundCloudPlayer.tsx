@@ -1,37 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 interface LazySoundCloudPlayerProps {
   trackUrl: string;
 }
 
 const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl }) => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
-    <div ref={containerRef} style={{ minHeight: '300px' }}>
-      {isVisible && !showPlayer ? (
+    <div style={{ minHeight: '300px' }}>
+      {/*
+        - Enquanto o usuário não clicar, mostramos somente um botão.
+        - Assim que clicar, renderizamos o <iframe> de uma vez só, sem depender de IntersectionObserver.
+      */}
+      {!showPlayer ? (
         <button
           onClick={() => setShowPlayer(true)}
           style={{
@@ -45,15 +27,17 @@ const LazySoundCloudPlayer: React.FC<LazySoundCloudPlayerProps> = ({ trackUrl })
         >
           Carregar Player
         </button>
-      ) : null}
-
-      {isVisible && showPlayer && (
+      ) : (
         <iframe
           loading="lazy"
           width="100%"
           height="300"
           scrolling="no"
           frameBorder="no"
+          /* 
+            - Recomendamos incluir explicitamente allow="autoplay" (e nada mais difícil de ser interpretado pelo navegador móvel),
+              para evitar que o player seja bloqueado por políticas de segurança mobile.
+          */
           allow="autoplay"
           src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(trackUrl)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}
         ></iframe>
