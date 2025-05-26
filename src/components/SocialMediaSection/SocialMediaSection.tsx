@@ -20,7 +20,7 @@ const SocialMediaSection: React.FC = () => {
         </p>
         <div className="flex justify-center gap-6 flex-wrap">
           <a
-            href="https://www.youtube.com/@djkazak"
+            href="https://youtube.com/@listen_kazak?si=WWjfE2QBzP4pNmdH"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center text-white hover:text-blue-500 transition-transform transform hover:scale-110"
@@ -29,7 +29,7 @@ const SocialMediaSection: React.FC = () => {
             <span className="text-sm">YouTube</span>
           </a>
           <a
-            href="https://www.tiktok.com/@djkazak"
+            href="https://www.tiktok.com/@listen_kazak?_t=ZM-8wW1Kr6GF4H&_r=1"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center text-white hover:text-blue-500 transition-transform transform hover:scale-110"
@@ -38,7 +38,7 @@ const SocialMediaSection: React.FC = () => {
             <span className="text-sm">TikTok</span>
           </a>
           <a
-            href="https://www.instagram.com/djkazak"
+            href="https://www.instagram.com/listen_kazak?igsh=MTJyM2M2eWtuc29qag%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center text-white hover:text-blue-500 transition-transform transform hover:scale-110"

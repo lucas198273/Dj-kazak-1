@@ -8,7 +8,7 @@ export default function Footer() {
 
         <div className="flex space-x-6 text-2xl">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/listen_kazak?igsh=MTJyM2M2eWtuc29qag%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-500 transition"
@@ -16,7 +16,7 @@ export default function Footer() {
             <FaInstagram />
           </a>
           <a
-            href="https://youtube.com"
+            href="https://youtube.com/@listen_kazak?si=WWjfE2QBzP4pNmdH"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition"

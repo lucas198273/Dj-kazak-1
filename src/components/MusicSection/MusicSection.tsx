@@ -60,7 +60,7 @@ export default function MusicSection() {
         {/* Botão para o perfil do SoundCloud */}
         <div className="mt-8">
           <a
-            href="https://soundcloud.com/dj-veli-745299224"
+            href="https://soundcloud.com/lucas-bernardo-375955261?ref=clipboard&p=i&c=1&si=CCD76F596D854904A41B3FBF744D5081&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharinghttps://soundcloud.com/dj-veli-745299224"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded transition duration-300"
