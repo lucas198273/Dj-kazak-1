@@ -15,9 +15,9 @@ export default function AboutVideos() {
   };
 
   return (
-    <section className="bg-gray-900 text-white pt-24 pb-16 px-6">
+    <section className="bg-gradient-to-b from-blue-500 to-black text-white pt-24 pb-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-blue-400 text-center">
+        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-blue- text-center">
           Vídeos do DJ Kazak no YouTube
         </h3>
 
