@@ -1,17 +1,15 @@
-
 export default function AboutVideos() {
   const youtubeLinks = [
-
     "https://youtu.be/6iTwC2B2sfk?si=0u0M1ts3gRgp-xlE",
-
-    "https://www.youtube.com/watch?v=lsiBL3CZjVU", 
-    "https://www.youtube.com/watch?v=6iTwC2B2sfk", 
+    "https://www.youtube.com/watch?v=lsiBL3CZjVU",
+    "https://www.youtube.com/watch?v=6iTwC2B2sfk",
     "https://www.youtube.com/watch?v=9RCRgLeXhgw",
     // Adicione mais links aqui
   ];
 
   const extractYoutubeId = (url: string): string | null => {
-    const regex = /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([\w-]{11})/;
+    // Regex atualizada para suportar múltiplos formatos de URLs do YouTube
+    const regex = /(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|v\/|shorts\/))([\w-]{11})(?:[?&#].*)?/;
     const match = url.match(regex);
     return match ? match[1] : null;
   };
@@ -26,7 +24,10 @@ export default function AboutVideos() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {youtubeLinks.map((link, index) => {
             const videoId = extractYoutubeId(link);
-            if (!videoId) return null;
+            if (!videoId) {
+              console.warn(`URL inválida ou vídeo não encontrado: ${link}`);
+              return null;
+            }
 
             return (
               <div
@@ -35,12 +36,11 @@ export default function AboutVideos() {
               >
                 <div className="relative w-full h-0 pb-[56.25%]">
                   <iframe
-                    src={`https://www.youtube.com/embed/${videoId}`}
+                    src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
                     title={`Vídeo ${index + 1}`}
                     className="absolute top-0 left-0 w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    loading="lazy"
                   />
                 </div>
               </div>
