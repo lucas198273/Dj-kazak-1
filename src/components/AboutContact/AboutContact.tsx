@@ -9,18 +9,16 @@ export default function AboutContact() {
           Para shows, parcerias ou outras informações, entre em contato:
         </p>
         <p className="text-lg text-gray-300">
-          Email: <a href="mailto:contato@djkazak.com" className="text-blue-500 hover:underline">contato@djkazak.com</a>
+          Email: <a href="bernardobiogomes@hotmal.com" className="text-blue-500 hover:underline">contato@djkazak.com</a>
         </p>
 
         <div className="mt-5 flex justify-center space-x-6">
           <a href="https://instagram.com/djkazak" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-blue-500 hover:underline transition-colors duration-200">
             Instagram
           </a>
-          <a href="https://twitter.com/djkazak" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-blue-500 hover:underline transition-colors duration-200">
-            Twitter
-          </a>
-          <a href="https://facebook.com/djkazak" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-blue-500 hover:underline transition-colors duration-200">
-            Facebook
+          
+          <a href="https://facebook.com/djkazak" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-blue-500 hover:underline transition-colors duration-200">
+            Tik Tok
           </a>
         </div>
       </div>

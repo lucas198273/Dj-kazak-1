@@ -23,14 +23,7 @@ export default function Footer() {
           >
             <FaYoutube />
           </a>
-          <a
-            href="https://spotify.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-green-500 transition"
-          >
-            <FaSpotify />
-          </a>
+        
         </div>
       </div>
 
