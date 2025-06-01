@@ -7,7 +7,7 @@ const SocialMediaSection: React.FC = () => {
     <section className="bg-black text-white py-12 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <img
-          src="/assets/img3.jpeg"
+          src="/assets/img3.webp"
           alt="DJ KAZAK"
           loading="lazy"
           className="mx-auto mb-6 w-32 h-32 rounded-full object-cover shadow-lg"
