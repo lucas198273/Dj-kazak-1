@@ -17,7 +17,7 @@ export default function Hero() {
     e.preventDefault();
 
     const message = `Olá DJ KAZAK! Gostaria de agendar um evento.\n\nNome/Empresa: ${form.nome}\nCidade: ${form.cidade}\nData: ${form.data}`;
-    const whatsappLink = `https://wa.me/5531999999999?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/5531983703055?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, '_blank');
     setIsOpen(false);
   };
@@ -46,7 +46,7 @@ export default function Hero() {
         {/* Imagem */}
         <div className="w-full md:w-1/2">
           <img
-            src="/assets/img1.jpeg"
+            src="/assets/img3.webp"
             alt="DJ tocando"
             loading="lazy"
             className="w-full max-w-sm mx-auto rounded-lg shadow-lg"

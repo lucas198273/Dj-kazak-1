@@ -1,9 +1,9 @@
 export default function AboutGallery() {
   const images = [
-    { src: '/assets/img3.jpeg', alt: 'DJ KAZAK em apresentação no Deputamadre' },
-    { src: '/assets/img2.jpeg', alt: 'DJ KAZAK na festa Mary Jane' },
-    { src: '/assets/img1.jpeg', alt: 'DJ KAZAK mixando em Área 51' },
-    { src: '/assets/img1.jpeg', alt: 'DJ KAZAK mixando em Área 51' }
+    { src: '/assets/img1.webp', alt: 'DJ KAZAK em apresentação no Deputamadre' },
+    { src: '/assets/img2.webp', alt: 'DJ KAZAK na festa Mary Jane' },
+    { src: '/assets/img3.webp', alt: 'DJ KAZAK mixando em Área 51' },
+    { src: '/assets/img4.webp', alt: 'DJ KAZAK mixando em Área 51' }
   ];
 
   return (

@@ -7,7 +7,7 @@ export default function AboutIntro() {
         {/* Imagem do artista */}
         <div className="md:w-1/2 mb-8 md:mb-0 md:mr-8">
           <img
-            src="/assets/img4.jpeg" // Substitua pelo caminho correto da imagem
+            src="/assets/img4.webp" // Substitua pelo caminho correto da imagem
             alt="DJ KAZAK"
             loading="lazy"
             className="rounded-lg shadow-lg w-full h-auto object-cover"
