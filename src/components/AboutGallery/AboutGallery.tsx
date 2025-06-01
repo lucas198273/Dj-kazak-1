@@ -18,8 +18,9 @@ export default function AboutGallery() {
               <img
                 src={image.src}
                 alt={image.alt}
-                loading="lazy"
-                className="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-[1.02]"
+                loading={index < 2 ? 'eager' : 'lazy'} // carrega as duas primeiras imediatamente
+                onLoad={(e) => e.currentTarget.classList.add('opacity-100')}
+                className="w-full h-auto object-cover aspect-[4/3] transition-all duration-700 ease-in-out opacity-0 bg-gray-800"
               />
             </div>
           ))}
