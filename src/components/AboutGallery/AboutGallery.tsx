@@ -14,11 +14,14 @@ export default function AboutGallery() {
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((image, index) => (
-            <div key={index} className="rounded-lg overflow-hidden shadow-md">
+            <div key={index} className="rounded-lg overflow-hidden shadow-md bg-gray-800">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-[1.02] bg-gray-800"
+                decoding="async"
+                width={400}
+                height={300}
+                className="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-[1.02]"
               />
             </div>
           ))}
