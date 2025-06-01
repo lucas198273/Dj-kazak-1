@@ -1,7 +1,7 @@
+// src/components/MusicSection/MusicSection.tsx
+import React from 'react';
 
-import LazySoundCloudPlayer from '../LazySoundCloudPlayer/LazySoundCloudPlayer';
-
-export default function MusicSection() {
+const MusicSection: React.FC = () => {
   return (
     <section className="w-full bg-black text-white py-16 px-6">
       <div className="max-w-7xl mx-auto text-center">
@@ -9,13 +9,71 @@ export default function MusicSection() {
 
         {/* SoundCloud Players */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1904481743" />
-          <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1897798665" />
-          <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1825949580" />
-          <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1823157531" />
-      <LazySoundCloudPlayer trackUrl="https://api.soundcloud.com/tracks/1950042995" />
+          {/* Player 1 */}
+          <div className="relative w-full h-[166px]">
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1904481743&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            {/* Camada de bloqueio para impedir cliques diretos */}
+            <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>
+          </div>
 
+          {/* Player 2 */}
+          <div className="relative w-full h-[166px]">
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1897798665&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>
+          </div>
 
+          {/* Player 3 */}
+          <div className="relative w-full h-[166px]">
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1825949580&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>
+          </div>
+
+          {/* Player 4 */}
+          <div className="relative w-full h-[166px]">
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1823157531&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>
+          </div>
+
+          {/* Player 5 */}
+          <div className="relative w-full h-[166px]">
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1950042995&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+            <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>
+          </div>
         </div>
 
         {/* Botão para o perfil do SoundCloud */}
@@ -32,4 +90,6 @@ export default function MusicSection() {
       </div>
     </section>
   );
-}
+};
+
+export default MusicSection;
