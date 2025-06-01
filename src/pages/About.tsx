@@ -7,8 +7,9 @@ export default function About() {
   return (
     <div className="about-page">
       <AboutIntro />
-      <AboutGallery />
+      
       <SocialMediaSection />
+      <AboutGallery />
     </div>
   );
 }
