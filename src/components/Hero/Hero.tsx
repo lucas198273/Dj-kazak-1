@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +9,10 @@ export default function Hero() {
     cidade: '',
     data: '',
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -25,9 +31,11 @@ export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-white to-black text-black py-20 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-
         {/* Texto principal */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+        <div
+          data-aos="fade-right"
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
+        >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Sinta o Ritmo <br />
             com <span className="text-rose-600">DJ KAZAK</span>
@@ -44,7 +52,7 @@ export default function Hero() {
         </div>
 
         {/* Imagem */}
-        <div className="w-full md:w-1/2">
+        <div data-aos="fade-left" className="w-full md:w-1/2">
           <img
             src="/assets/img3.webp"
             alt="DJ tocando"
@@ -57,7 +65,10 @@ export default function Hero() {
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
-          <div className="bg-white rounded-xl p-6 w-full max-w-md shadow-xl relative">
+          <div
+            data-aos="zoom-in"
+            className="bg-white rounded-xl p-6 w-full max-w-md shadow-xl relative"
+          >
             {/* Botão de Fechar */}
             <button
               onClick={() => setIsOpen(false)}
