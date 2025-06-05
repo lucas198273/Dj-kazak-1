@@ -1,19 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
 
   return (
     <header
-      data-aos="fade-down"
+     
       className="fixed inset-x-0 top-0 h-20 bg-gradient-to-r bg-white text-black z-50 shadow-lg"
     >
       <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between relative">
@@ -30,7 +26,7 @@ export default function Header() {
         {/* Menu Desktop */}
         <nav
           className="hidden md:flex space-x-8 font-medium text-black"
-          data-aos="fade-left"
+       
         >
           <Link to="/" className="hover:text-blue-700 transition">Início</Link>
           <Link to="/about" className="hover:text-blue-700 transition">Sobre</Link>
@@ -39,7 +35,7 @@ export default function Header() {
         {/* Logo Centralizada */}
         <div
           className="absolute left-1/2 transform -translate-x-1/2 mt-6"
-          data-aos="zoom-in"
+         
         >
           <Link to="/">
             <img
